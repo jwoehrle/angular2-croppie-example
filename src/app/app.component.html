@@ -1,3 +1,9 @@
 <h1>
-  {{title}}
+
 </h1>
+
+<div>
+  <app-image-cropper #cropper [initialZoom]="0.5"></app-image-cropper>
+  <button (click)="saveImageSelection()">CROP IMAGE</button>
+  <img [src]="base64ImageData" *ngIf="base64ImageData">
+</div>
